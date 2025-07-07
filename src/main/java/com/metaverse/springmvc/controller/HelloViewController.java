@@ -17,6 +17,8 @@ public class HelloViewController {
 
     @GetMapping("/html/templetes") //이 주소로 들어가고 싶으면 thymeleaf라는 라이브러리가 있어야함.
     public String htmlTempletes(){ // 템플릿 폴더에 넣어야함. 폴더마다 기능이 다름
+        // prefix classpath : resources까지의 경로 + templates/ 까지 가지고 있음
+        // suffix .html
         return "hello-templete";
     }
 }
