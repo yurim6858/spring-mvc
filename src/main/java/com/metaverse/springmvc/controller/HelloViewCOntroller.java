@@ -9,4 +9,9 @@ public class HelloViewCOntroller {
     public String hello(){
         return "hello.html";
     }
+
+    @GetMapping("/html/redirect")
+    public String htmlRedirect(){
+        return "redirect:/hello.html";
+    }
 }
