@@ -16,4 +16,14 @@ public class JsonTest {
         String jsonString = objectMapper.writeValueAsString(star);
         System.out.println("json Result :" + jsonString);
     }
+
+    @Test
+    @DisplayName("")
+    void test2() throws JsonProcessingException {
+        String json = "{\"name\":\"Meta\",\"age\":95}";
+        ObjectMapper objectMapper = new ObjectMapper();
+        // json 문자열을 Star 클래스에 맞추어 값을 일고 변환
+        Star star = objectMapper.readValue(json, Star.class);
+        System.out.println("age: " + star.getAge());
+    }
 }
