@@ -1,0 +1,19 @@
+package com.metaverse.springmvc;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.metaverse.springmvc.domain.Star;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+public class JsonTest {
+    @Test
+    @DisplayName("Object to JSON : Get method 필요")
+    void test1() throws JsonProcessingException {
+        Star star = new Star("Meta",55);
+
+        ObjectMapper objectMapper = new ObjectMapper(); //Jackson 라이브러리의 ObjectMapper가 파싱 기능을 수행한다.
+        String jsonString = objectMapper.writeValueAsString(star);
+        System.out.println("json Result :" + jsonString);
+    }
+}
